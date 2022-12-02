@@ -7,7 +7,7 @@ const addToMax3 = (n:number) => {
     for (var i=maxSize-1;i>-1;i--) {
         if (max[i]>n) break;
     }
-    max.splice(i+1, 0, n)
+    max.splice(i+1, 0, n);
     max.splice(3);
 };
 a.forEach(b => addToMax3( b.split("\r\n").reduce<number>( (n,c)=>n+Number(c),0 ) ) )

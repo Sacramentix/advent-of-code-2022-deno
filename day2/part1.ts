@@ -30,19 +30,12 @@ const winScore:Record<Round, number> = {
     'A Z': Lose,    'B Z':  Win,    'C Z': Draw,
 };
 
-const choice:Record<Round, MyShape> = {
-    'A X': Z,       'B X': X,       'C X': Y,
-    'A Y': X,       'B Y': Y,       'C Y': Z,
-    'A Z': Y,       'B Z': Z,       'C Z': X,
-}
-
 let roundScore:Record<Round, number> = {} as any;
 
 for (const i of ABC) {
     for (const j of XYZ) {
         const r = i+" "+j as Round;
-        const played = choice[r];
-        roundScore[r] = shapeScore[played]+ winScore[(i+" "+played) as Round];
+        roundScore[r] = shapeScore[j]+ winScore[r];
     }
 }
 
