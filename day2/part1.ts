@@ -6,7 +6,7 @@ type MyShape  = 'X' | 'Y' | 'Z';
 
 type Round = `${ElfShape} ${MyShape}`;
 
-const strategy= input.split("\r\n") as Round[];
+const strategy= input.split(/\r?\n/) as Round[];
 
 let score = 0;
 
