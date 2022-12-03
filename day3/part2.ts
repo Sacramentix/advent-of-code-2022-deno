@@ -10,7 +10,6 @@ function getTriple() {
     // Find the 'letter' entries carried by all elf ( see below for explanation )
     const kv = Object.entries(m).find(([k,v])=>v===0b111);
     if (kv != null)  {
-        console.log(kv)
         const n = Number(kv[0]) - 96;
         score+= n<0 ? n+58 : n;
         m = {};
