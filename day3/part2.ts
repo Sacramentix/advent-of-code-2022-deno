@@ -2,6 +2,9 @@ const input = Deno.readTextFileSync("./input.txt");
 
 const sacks = input.split(/\r?\n/);
 
+console.time("Processing")
+const dt = performance.now();
+
 let score = 0;
 let m:Record<number, number> = {};
 let o = 0;
@@ -33,5 +36,8 @@ sacks.forEach(sack=>{
 });
 // We need to check the last group 
 getTriple();
+
+console.log(performance.now() - dt);
+console.timeEnd ("Processing")
 
 console.log(score);
