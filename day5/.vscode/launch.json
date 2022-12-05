@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "name": "Launch Program",
+            "type": "pwa-node",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "C:\\ProgramData\\chocolatey\\bin\\deno.EXE",
+            "runtimeArgs": [
+                "run",
+                "--unstable",
+                "--inspect",
+                "--inspect-brk",
+                "--allow-all"
+            ],
+            "attachSimplePort": 9229
+        }
+    ]
+}
